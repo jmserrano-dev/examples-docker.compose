@@ -1,0 +1,6 @@
+services:
+  signalr-web:
+    image: mcr.microsoft.com/signalrsamples/chatroom:latest
+
+  nginx:
+    image: nginx:latest
