@@ -1,4 +1,7 @@
 services:
+  sql-server:
+    image: mcr.microsoft.com/mssql/server
+
   signalr-web:
     build:
       context: chat-room

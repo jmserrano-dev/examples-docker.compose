@@ -1,4 +1,9 @@
 services:
+  redis:
+    restart: always
+    ports:
+      - "6379:6379"
+
   signalr-web:
     expose:
       - 80

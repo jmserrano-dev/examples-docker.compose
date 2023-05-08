@@ -1,9 +1,19 @@
 services:
+  sql-server:
+    restart: always
+    environment:
+      - MSSQL_SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+    ports:
+      - "1433:1433"
+
   signalr-web:
     expose:
       - 80
     env_file:
       - .env
+    depends_on:
+      - sql-server
     scale: 2
 
   nginx:

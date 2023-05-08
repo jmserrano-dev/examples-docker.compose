@@ -1,4 +1,7 @@
 services:
+  redis:
+    image: redis:7.0.11-alpine
+
   signalr-web:
     build:
       context: chat-room
